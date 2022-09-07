@@ -57,10 +57,6 @@ public class ClimaActual
 				System.out.println(Lugar+":");
 				System.out.println("Hoy: "+Hoy);
 				System.out.println("Mañana: "+Mañana);
-		
-
-
-				
 
 		}
 		catch (Exception e)
