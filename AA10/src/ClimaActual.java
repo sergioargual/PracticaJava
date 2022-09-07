@@ -48,9 +48,19 @@ public class ClimaActual
 			    Scanner entradaEscaner = new Scanner (System.in);
 			    Nombre = entradaEscaner.nextLine ();
 			}
-				System.out.println("El Clima de Hoy es: ");
-				System.out.println(informacionString.toString());
+				String datos = informacionString.toString();
+				JSONObject obj = new JSONObject(datos);
+				String Lugar = obj.getString("metadescripcion");
+				String Hoy = obj.getJSONObject("today").getString("p");
+				String Mañana = obj.getJSONObject("tomorrow").getString("p");
+				
+				System.out.println(Lugar+":");
+				System.out.println("Hoy: "+Hoy);
+				System.out.println("Mañana: "+Mañana);
+		
 
+
+				
 
 		}
 		catch (Exception e)
