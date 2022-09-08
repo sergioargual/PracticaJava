@@ -1,96 +1,69 @@
-import java.text.SimpleDateFormat;
-
-Calendar calendar = Calendar.getInstance()
-int dia = calendar.get(Calendar.DAY_OF_WEEK)
-
-
-pipeline 
-{
+import java.time.LocalDate;
+LocalDate fecha = LocalDate.now()
+pipeline {
     agent any
 
-    stages 
-    {
-        stage('Chiste Informaticos')
-        {
-            steps 
-            {
-                script
-                {
-                    if (dia == 5)
-                    {
-                    println "- ¿Por qué los programadores son tan malos amantes? - Porque siempre intentan encontrar la forma de hacer la tarea lo más rápido posible, y cuando lo consiguen están convencidos de que han mejorado."
-                    }
+    stages {
+        stage('Getting day') {
+            steps{
+                script{
 
-                  
+                    println 'Hoy es ' + fecha.getDayOfMonth() + "/" + fecha.getMonthValue() + "/" + fecha.getYear()
+                    switch (fecha.getDayOfWeek()) {
+                        case 'MONDAY':
+                            stage('MONDAY'){
+                                script{
+                                    stage('Chiste de futbol'){
+                                        println "-Cariño, estás obsesionado con el fútbol y me haces falta. -¿Quééé? ¿Faltaaa? ¿Falta? ¡Si no te he tocado! Pero cómo puedes decir falta…"
+                                    }
+                                }
+                            }
+                            break;
+                        case 'TUESDAY':
+                            stage('TUESDAY'){
+                                script{
+                                    stage('Chiste de politica'){
+                                        println "Dos amigos hablando: -¿A quién le vas a votar en las próximas elecciones? -Yo, a Alibabá y los 40 ladrones. -¿Y éso? -Para asegurarme que solo sean 40."
+                                    }
+                                }
+                            }
+                            break;
+                        case 'WEDNESDAY':
+                            stage('WEDNESDAY'){
+                                script{
+                                    stage('Chiste de medicos'){
+                                        println "- Doctor ¿Ud. piensa que después de esta operación voy a volver a caminar? - Claro que si... ¡Porque va a tener que vender el carro para pagar la factura de la Clínica..!"
+                                    }
+                                }
+                            }
+                            break;
+                        case 'THURSDAY':
+                            stage('THURSDAY'){
+                                script{
+                                    println 'Hoy es ' + fecha.getDayOfMonth() + "/" + fecha.getMonthValue() + "/" + fecha.getYear()
+                                    stage('Chiste informaticos'){
+                                        println "- ¿Por qué los programadores son tan malos amantes? - Porque siempre intentan encontrar la forma de hacer la tarea lo más rápido posible, y cuando lo consiguen están convencidos de que han mejorado."
+                                    }
+                                }
+                            }
+                            break;
+                        case 'FRIDAY':
+                            stage('FRIDAY'){
+                                script{
+                                    stage('Chiste de humor negro'){
+                                        println "¿Quieres saber cuánto son siete por siete? Pregúntale a uno de Chernóbil, lo contará con sus dedos"
+                                    }
+                                }
+                            }
+                            break;
+                            
+                        default:
+                            println '¡No hay chistes el fin de semana!'
+                            break;
+                    }
                 }
             }
         }
-        
-        stage('Chistes de humor Negro')
-        {
-            steps 
-            {
-                script
-                {
-
-
-                  if (dia == 6)
-                    {
-                    println "¿Quieres saber cuánto son siete por siete? Pregúntale a uno de Chernóbil, lo contará con sus dedos"
-                    }
-
-
-                }
-            }
-        }
-        
-        stage('Chistes de Futbol')
-        {
-            steps 
-            {
-                script
-                {
-
-
-                   if (dia == 2)
-                    {
-                    println "-Cariño, estás obsesionado con el fútbol y me haces falta. -¿Quééé? ¿Faltaaa? ¿Falta? ¡Si no te he tocado! Pero cómo puedes decir falta…"
-                    }
-   
-                }
-            }
-        }
-        stage('Chistes de Politica')
-        {
-            steps 
-            {
-                script
-                {
-
-
-                    if (dia == 3)
-                    {
-                    println "Dos amigos hablando: -¿A quién le vas a votar en las próximas elecciones? -Yo, a Alibabá y los 40 ladrones. -¿Y éso? -Para asegurarme que solo sean 40."
-                    }
-    
-                }
-            }
-        }
-        stage('Chistes de Medicos')
-        {
-            steps 
-            {
-                script
-                {
-
-                    if (dia == 4)
-                    {
-                    println "- Doctor ¿Ud. piensa que después de esta operación voy a volver a caminar? - Claro que si... ¡Porque va a tener que vender el carro para pagar la factura de la Clínica..!"
-                    }
-    
-                }
-            }
-        }
-        
     }
 }
+
