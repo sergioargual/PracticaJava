@@ -15,12 +15,9 @@ pipeline
             {
                 script
                 {
-                    Calendar calendar = Calendar.getInstance()
-                    def dia = calendar.get(Calendar.DAY_OF_WEEK)
-                   if (dia.is(4))
-                    {
+
                     println "JUEVES"
-                    }
+                    
 
                   
                 }
