@@ -1,1 +1,90 @@
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
+LocalDate Fecha = LocalDate.now()
+DayOfWeek dia = Fecha.getDayOfWeek();
+
+pipeline 
+{
+    agent any
+
+    stages 
+    {
+        stage('Chiste Informaticos')
+        {
+            steps 
+            {
+                script
+                {
+                  if (dia is("THURSDAY"))
+                    {
+                    println("JUEVES")
+                    }
+
+                  
+                }
+            }
+        }
+        
+        stage('Chistes de humor Negro')
+        {
+            steps 
+            {
+                script
+                {
+                
+                  if (dia is(FRIDAY))
+                    {
+                    println("VIERNES")
+                    }
+
+
+                }
+            }
+        }
+        
+        stage('Chistes de Futbol')
+        {
+            steps 
+            {
+                script
+                {
+                   if (dia is(MONDAY))
+                    {
+                    println("LUNES")
+                    }
+   
+                }
+            }
+        }
+        stage('Chistes de Politica')
+        {
+            steps 
+            {
+                script
+                {
+                    if (dia is(TUESDAY))
+                    {
+                    println("MARTES")
+                    }
+    
+                }
+            }
+        }
+        stage('Chistes de Medicos')
+        {
+            steps 
+            {
+                script
+                {
+                    if (dia is(WEDNESDAY))
+                    {
+                    println("MIERCOLES")
+                    }
+    
+                }
+            }
+        }
+        
+    }
+}
