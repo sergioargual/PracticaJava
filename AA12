@@ -1,7 +1,8 @@
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
-LocalDate Fecha = LocalDate.now()
+ Calendar calendar = Calendar.getInstance()
+ def dia = calendar.get(Calendar.DAY_OF_WEEK)
 
 
 pipeline 
@@ -16,7 +17,6 @@ pipeline
             {
                 script
                 {
-                  DayOfWeek dia = Fecha.getDayOfWeek();
                   if (dia.is("THURSDAY"))
                     {
                     println("JUEVES")
@@ -33,7 +33,7 @@ pipeline
             {
                 script
                 {
-                  DayOfWeek dia = Fecha.getDayOfWeek();
+
                   if (dia.is(FRIDAY))
                     {
                     println("VIERNES")
@@ -50,7 +50,7 @@ pipeline
             {
                 script
                 {
-                   DayOfWeek dia = Fecha.getDayOfWeek();
+
                    if (dia.is(MONDAY))
                     {
                     println("LUNES")
@@ -65,7 +65,7 @@ pipeline
             {
                 script
                 {
-                   DayOfWeek dia = Fecha.getDayOfWeek();
+
                     if (dia.is(TUESDAY))
                     {
                     println("MARTES")
@@ -80,7 +80,6 @@ pipeline
             {
                 script
                 {
-                   DayOfWeek dia = Fecha.getDayOfWeek();
                     if (dia.is(WEDNESDAY))
                     {
                     println("MIERCOLES")
