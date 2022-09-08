@@ -16,7 +16,7 @@ pipeline
             {
                 script
                 {
-                    if (dia == 3)
+                    if (dia == 5)
                     {
                     println "- ¿Por qué los programadores son tan malos amantes? - Porque siempre intentan encontrar la forma de hacer la tarea lo más rápido posible, y cuando lo consiguen están convencidos de que han mejorado."
                     }
@@ -34,7 +34,7 @@ pipeline
                 {
 
 
-                  if (dia == 4)
+                  if (dia == 6)
                     {
                     println "¿Quieres saber cuánto son siete por siete? Pregúntale a uno de Chernóbil, lo contará con sus dedos"
                     }
@@ -52,7 +52,7 @@ pipeline
                 {
 
 
-                   if (dia == 0)
+                   if (dia == 2)
                     {
                     println "-Cariño, estás obsesionado con el fútbol y me haces falta. -¿Quééé? ¿Faltaaa? ¿Falta? ¡Si no te he tocado! Pero cómo puedes decir falta…"
                     }
@@ -68,7 +68,7 @@ pipeline
                 {
 
 
-                    if (dia == 1)
+                    if (dia == 3)
                     {
                     println "Dos amigos hablando: -¿A quién le vas a votar en las próximas elecciones? -Yo, a Alibabá y los 40 ladrones. -¿Y éso? -Para asegurarme que solo sean 40."
                     }
@@ -83,7 +83,7 @@ pipeline
                 script
                 {
 
-                    if (dia == 2)
+                    if (dia == 4)
                     {
                     println "- Doctor ¿Ud. piensa que después de esta operación voy a volver a caminar? - Claro que si... ¡Porque va a tener que vender el carro para pagar la factura de la Clínica..!"
                     }
