@@ -17,7 +17,7 @@ pipeline
             {
                 script
                 {
-                  if (dia.is("THURSDAY"))
+                  if (dia.is(4))
                     {
                     println("JUEVES")
                     }
@@ -34,7 +34,7 @@ pipeline
                 script
                 {
 
-                  if (dia.is(FRIDAY))
+                  if (dia.is(5))
                     {
                     println("VIERNES")
                     }
@@ -51,7 +51,7 @@ pipeline
                 script
                 {
 
-                   if (dia.is(MONDAY))
+                   if (dia.is(1))
                     {
                     println("LUNES")
                     }
@@ -66,7 +66,7 @@ pipeline
                 script
                 {
 
-                    if (dia.is(TUESDAY))
+                    if (dia.is(2))
                     {
                     println("MARTES")
                     }
@@ -80,7 +80,7 @@ pipeline
             {
                 script
                 {
-                    if (dia.is(WEDNESDAY))
+                    if (dia.is(3))
                     {
                     println("MIERCOLES")
                     }
