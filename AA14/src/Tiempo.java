@@ -101,6 +101,7 @@ public class Tiempo extends Chocolates implements produccionActiva
 					Path file2 = Paths.get(nombreArchivo2);				
 					List<String> lineas2 = Arrays.asList(Texto3);
 					Files.write(file1, lineas2, StandardCharsets.UTF_8);
+					System.out.println("Se produjo Chocolate. Se crea archivo txt");
 					
 				}
 				else
