@@ -1,16 +1,22 @@
 
+import java.time.LocalDate;
+LocalDate fecha = LocalDate.now()
 pipeline 
 {
-   agent any
-   stages
-   {
-      stage('Saludo') 
-      {
-         steps 
-         {
-             echo "Hola Mundo! EL día de hoy es elDia (variable que almacene la fecha).
-                    Este curso me hizo programar mas de lo que me hubiese gustado" 
-         }
-      }
-   }
+    agent any
+    stages 
+    {
+        stage('Getting day') 
+        {
+            steps
+            {
+                script
+                {
+
+                    println 'Hola Mundo. ' + 'EL día de hoy es '+ fecha+ ' .Este curso me hizo programar mas de lo que me hubiese gustado'
+  
+                }
+            }
+        }
+    }
 }
