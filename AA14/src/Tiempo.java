@@ -98,10 +98,8 @@ public class Tiempo extends Chocolates implements produccionActiva
 					Path file1 = Paths.get(nombreArchivo1);				
 					List<String> lineas1 = Arrays.asList(Texto1);
 					Files.write(file1, lineas1, StandardCharsets.UTF_8);
-					Path file2 = Paths.get(nombreArchivo2);				
-					List<String> lineas2 = Arrays.asList(Texto3);
-					Files.write(file1, lineas2, StandardCharsets.UTF_8);
-					System.out.println("Se produjo Chocolate. Se crea archivo txt");
+			
+
 					
 				}
 				else
@@ -110,7 +108,7 @@ public class Tiempo extends Chocolates implements produccionActiva
 					List<String> lineas = Arrays.asList(Texto2);
 					Files.write(file, lineas, StandardCharsets.UTF_8);
 				}
-				
+			
 		}
 		catch (Exception e)
 		{
