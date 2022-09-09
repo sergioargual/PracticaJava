@@ -1,9 +1,15 @@
-pipeline {
+
+pipeline 
+{
    agent any
-   stages {
-      stage('Hello') {
-         steps {
-             echo "Hola Mundo"
+   stages
+   {
+      stage('Saludo') 
+      {
+         steps 
+         {
+             echo "Hola Mundo! EL día de hoy es elDia (variable que almacene la fecha).
+                    Este curso me hizo programar mas de lo que me hubiese gustado" 
          }
       }
    }
