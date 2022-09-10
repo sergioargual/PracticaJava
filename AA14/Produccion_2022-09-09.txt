@@ -1,0 +1,9 @@
+La temperatura de hoy en Sevilla es menor a 40 grados. Por lo que la producción de hoy ha sido la siguiente: 
+
+Nombre					CANTIDAD PRODUCIDA
+- Chocolate Blanco			1000
+- Choclate Negro			1500
+- Chocolate con almendras		1200
+- Chocolate con castañas de caju	1300
+- Chocolate en rama			100
+- Chocolate con 70% de cacao		1500
