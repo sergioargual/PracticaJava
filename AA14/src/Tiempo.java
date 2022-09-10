@@ -62,7 +62,7 @@ public class Tiempo extends Chocolates implements produccionActiva
 				obj3.Temp = Integer.parseInt(Temperatura);
 				
 				
-				String Texto1 = ("La temperatura de hoy en Sevilla es menor a 40 grados. Por lo que la producción de hoy ha sido la siguiente: " + "\n" + "\n" +
+				String Texto1 = ("La temperatura de hoy en Sevilla es de "+obj3.Temp+" grados"+". Por lo que la producción de hoy ha sido la siguiente: " + "\n" + "\n" +
 								ListaChocolates);
 				
 				String Texto2 = ("La temperatura de hoy en Sevilla es mayor a 40 grados. Por lo que hoy no se ha producido chocolate");
