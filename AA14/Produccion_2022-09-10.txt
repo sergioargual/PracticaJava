@@ -1,4 +1,4 @@
-La temperatura de hoy en Sevilla es menor a 40 grados. Por lo que la producción de hoy ha sido la siguiente: 
+La temperatura de hoy en Sevilla es de 36 grados. Por lo que la producción de hoy ha sido la siguiente: 
 
 Nombre					CANTIDAD PRODUCIDA
 - Chocolate Blanco			1000
