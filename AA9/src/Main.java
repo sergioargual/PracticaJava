@@ -29,6 +29,7 @@ public class Main implements Recaudacion
 		Videojuegos v6 = new Videojuegos("HORIZON",50000,5);
 		V.add(0,v1); V.add(1,v2); V.add(2,v3); V.add(3,v4); V.add(4,v5); V.add(5,v6);
 		
+		
 		    int DineroRecaudadoTotal = 0;
 		    int CantidadTotalVentas = 0;
 		
