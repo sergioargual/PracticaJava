@@ -1,173 +1,66 @@
-pipeline 
-{
+import java.time.LocalDate
+pipeline{
     agent any
-    stages 
-    {
-        stage('Provincias') 
-        {
-            steps
-            {
-					echo 'ID de Usuario: 1
-Nombre: Vargas,Gustavo
-Fecha Login: 2022-09-12
-
-[Provincia: A Coruña
-Capital de Provincia: A Coruña
-
-, Provincia: Alacant
-Capital de Provincia: Alacant
-
-, Provincia: Albacete
-Capital de Provincia: Albacete
-
-, Provincia: Almería
-Capital de Provincia: Almería
-
-, Provincia: Araba
-Capital de Provincia: Araba
-
-, Provincia: Asturias
-Capital de Provincia: Asturias
-
-, Provincia: Badajoz
-Capital de Provincia: Badajoz
-
-, Provincia: Barcelona
-Capital de Provincia: Barcelona
-
-, Provincia: Bizkaia
-Capital de Provincia: Bizkaia
-
-, Provincia: Burgos
-Capital de Provincia: Burgos
-
-, Provincia: Cantabria
-Capital de Provincia: Cantabria
-
-, Provincia: Castelló
-Capital de Provincia: Castelló
-
-, Provincia: Ceuta
-Capital de Provincia: Ceuta
-
-, Provincia: Ciudad Real
-Capital de Provincia: Ciudad Real
-
-, Provincia: Cuenca
-Capital de Provincia: Cuenca
-
-, Provincia: Cáceres
-Capital de Provincia: Cáceres
-
-, Provincia: Cádiz
-Capital de Provincia: Cádiz
-
-, Provincia: Córdoba
-Capital de Provincia: Córdoba
-
-, Provincia: Gipuzcoa
-Capital de Provincia: Gipuzcoa
-
-, Provincia: Girona
-Capital de Provincia: Girona
-
-, Provincia: Granada
-Capital de Provincia: Granada
-
-, Provincia: Guadalajara
-Capital de Provincia: Guadalajara
-
-, Provincia: Huelva
-Capital de Provincia: Huelva
-
-, Provincia: Huesca
-Capital de Provincia: Huesca
-
-, Provincia: Illes Balears
-Capital de Provincia: Illes Balears
-
-, Provincia: Jaén
-Capital de Provincia: Jaén
-
-, Provincia: La Rioja
-Capital de Provincia: La Rioja
-
-, Provincia: Las Palmas
-Capital de Provincia: Las Palmas
-
-, Provincia: León
-Capital de Provincia: León
-
-, Provincia: Lleida
-Capital de Provincia: Lleida
-
-, Provincia: Lugo
-Capital de Provincia: Lugo
-
-, Provincia: Madrid
-Capital de Provincia: Madrid
-
-, Provincia: Melilla
-Capital de Provincia: Melilla
-
-, Provincia: Murcia
-Capital de Provincia: Murcia
-
-, Provincia: Málaga
-Capital de Provincia: Málaga
-
-, Provincia: Navarra
-Capital de Provincia: Navarra
-
-, Provincia: Ourense
-Capital de Provincia: Ourense
-
-, Provincia: Palencia
-Capital de Provincia: Palencia
-
-, Provincia: Pontevedra
-Capital de Provincia: Pontevedra
-
-, Provincia: Salamanca
-Capital de Provincia: Salamanca
-
-, Provincia: Santa Cruz de Tenerife
-Capital de Provincia: Santa Cruz de Tenerife
-
-, Provincia: Segovia
-Capital de Provincia: Segovia
-
-, Provincia: Sevilla
-Capital de Provincia: Sevilla
-
-, Provincia: Soria
-Capital de Provincia: Soria
-
-, Provincia: Tarragona
-Capital de Provincia: Tarragona
-
-, Provincia: Teruel
-Capital de Provincia: Teruel
-
-, Provincia: Toledo
-Capital de Provincia: Toledo
-
-, Provincia: Valladolid
-Capital de Provincia: Valladolid
-
-, Provincia: València
-Capital de Provincia: València
-
-, Provincia: Zamora
-Capital de Provincia: Zamora
-
-, Provincia: Zaragoza
-Capital de Provincia: Zaragoza
-
-, Provincia: Ávila
-Capital de Provincia: Ávila
-
-]'            }
-        }
-    }
+    stages{
+        stage('main'){
+            steps{
+                script{
+println 'ID de Usuario: 1	Nombre: Sergio González Acosta	Fecha: 2022-09-12'
+println 'Provincia: A Coruña	Capital: A Coruña'
+println 'Provincia: Alacant	Capital: Alacant'
+println 'Provincia: Albacete	Capital: Albacete'
+println 'Provincia: Almería	Capital: Almería'
+println 'Provincia: Araba	Capital: Araba'
+println 'Provincia: Asturias	Capital: Asturias'
+println 'Provincia: Badajoz	Capital: Badajoz'
+println 'Provincia: Barcelona	Capital: Barcelona'
+println 'Provincia: Bizkaia	Capital: Bizkaia'
+println 'Provincia: Burgos	Capital: Burgos'
+println 'Provincia: Cantabria	Capital: Cantabria'
+println 'Provincia: Castelló	Capital: Castelló'
+println 'Provincia: Ceuta	Capital: Ceuta'
+println 'Provincia: Ciudad Real	Capital: Ciudad Real'
+println 'Provincia: Cuenca	Capital: Cuenca'
+println 'Provincia: Cáceres	Capital: Cáceres'
+println 'Provincia: Cádiz	Capital: Cádiz'
+println 'Provincia: Córdoba	Capital: Córdoba'
+println 'Provincia: Gipuzcoa	Capital: Gipuzcoa'
+println 'Provincia: Girona	Capital: Girona'
+println 'Provincia: Granada	Capital: Granada'
+println 'Provincia: Guadalajara	Capital: Guadalajara'
+println 'Provincia: Huelva	Capital: Huelva'
+println 'Provincia: Huesca	Capital: Huesca'
+println 'Provincia: Illes Balears	Capital: Illes Balears'
+println 'Provincia: Jaén	Capital: Jaén'
+println 'Provincia: La Rioja	Capital: La Rioja'
+println 'Provincia: Las Palmas	Capital: Las Palmas'
+println 'Provincia: León	Capital: León'
+println 'Provincia: Lleida	Capital: Lleida'
+println 'Provincia: Lugo	Capital: Lugo'
+println 'Provincia: Madrid	Capital: Madrid'
+println 'Provincia: Melilla	Capital: Melilla'
+println 'Provincia: Murcia	Capital: Murcia'
+println 'Provincia: Málaga	Capital: Málaga'
+println 'Provincia: Navarra	Capital: Navarra'
+println 'Provincia: Ourense	Capital: Ourense'
+println 'Provincia: Palencia	Capital: Palencia'
+println 'Provincia: Pontevedra	Capital: Pontevedra'
+println 'Provincia: Salamanca	Capital: Salamanca'
+println 'Provincia: Santa Cruz de Tenerife	Capital: Santa Cruz de Tenerife'
+println 'Provincia: Segovia	Capital: Segovia'
+println 'Provincia: Sevilla	Capital: Sevilla'
+println 'Provincia: Soria	Capital: Soria'
+println 'Provincia: Tarragona	Capital: Tarragona'
+println 'Provincia: Teruel	Capital: Teruel'
+println 'Provincia: Toledo	Capital: Toledo'
+println 'Provincia: Valladolid	Capital: Valladolid'
+println 'Provincia: València	Capital: València'
+println 'Provincia: Zamora	Capital: Zamora'
+println 'Provincia: Zaragoza	Capital: Zaragoza'
+println 'Provincia: Ávila	Capital: Ávila'
 }
+}
+}
+}
+}
+

@@ -70,31 +70,35 @@ public class Main extends API implements CreacionArchivo
 				  {
 		            listaProvincia.add(new Provincia(((JSONObject) iter).getString("name"), ((JSONObject) iter).getString("path")));
 		          }
-				  Usuario U = new Usuario(1, "Vargas,Gustavo", LocalDate.now());
+				  Usuario U = new Usuario(1, "Sergio González Acosta", LocalDate.now());
 				  
 				  String TextoTXT = U + listaProvincia.toString();
 				  Path file = Paths.get(obj4.getArchivo());				
 				  List<String> lineas = Arrays.asList(TextoTXT);
 				  Files.write(file, lineas, StandardCharsets.UTF_8);
 				  
+				  StringBuilder sbjenkins = new StringBuilder();
 				  
-				  String TextoJenkins = "pipeline \r\n"
-				  		+ "{\r\n"
-				  		+ "    agent any\r\n"
-				  		+ "    stages \r\n"
-				  		+ "    {\r\n"
-				  		+ "        stage('Provincias') \r\n"
-				  		+ "        {\r\n"
-				  		+ "            steps\r\n"
-				  		+ "            {\r\n"
-				  		+ "					echo "+"'"+TextoTXT+"'"
-				  		+ "            }\r\n"
-				  		+ "        }\r\n"
-				  		+ "    }\r\n"
-				  		+ "}";
+					sbjenkins.append("import java.time.LocalDate\r\n");
+		            sbjenkins.append("pipeline{\r\n");
+		            sbjenkins.append("    agent any\r\n");
+		            sbjenkins.append("    stages{\r\n");
+		            sbjenkins.append("        stage('main'){\r\n");
+		            sbjenkins.append("            steps{\r\n");
+		            sbjenkins.append("                script{\r\n");
+		            sbjenkins.append("println '"+ "ID de Usuario: "+U.ID_USUARIO +"\t"+"Nombre: "+ U.Nombre+"\t"+"Fecha: " + U.Fecha +"'\r\n");
+		            for (int j = 0;j<listaProvincia.size();j++)
+		            {
+		            sbjenkins.append("println '"+ "Provincia: " + listaProvincia.get(j).Provincia+ "\t"+ "Capital: "+listaProvincia.get(j).Capital  +"'\r\n");	
+		            }
+		            sbjenkins.append("}\r\n");
+		            sbjenkins.append("}\r\n");
+		            sbjenkins.append("}\r\n");
+		            sbjenkins.append("}\r\n");
+		            sbjenkins.append("}\r\n");
 				  String jenkins = "jenkinsfileAA15";
 				  Path file2 = Paths.get(jenkins);
-				  List<String> lineas2 = Arrays.asList(TextoJenkins);
+				  List<StringBuilder> lineas2 = Arrays.asList(sbjenkins);
 				  Files.write(file2, lineas2, StandardCharsets.UTF_8);
 				  
 				  
