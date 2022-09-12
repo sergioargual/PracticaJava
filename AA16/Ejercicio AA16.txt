@@ -1,0 +1,30 @@
+EJERCICIO AA16
+--------------- 	IMPLEMENTANDO AOP, INTERFACES, CLASES, HERENCIA, GITHUB ---------------
+PROBLEMATICA: Nos contrataron de Spotify para desarrollar un programa que nos brinde información general del uso de la aplicación
+A día de hoy tienen 4 archivos planos donde tienen los registros de los ultimos años y les gustaría unificarlos en uno solo. Los archivos son los siguientes:
+TOP 10 CANCIONES DE 2021
+TOP 10 CANCIONES DE 2020
+TOP 10 ARTISTAS DE 2021
+TOP 10 ARTISTAS DE 2020
+Luego de haber informado esto, nos piden que informemos, segun el valor de cada canción su recaudación global. teniendo en cuenta que por cada vez que se escucha una canción se le da 2 euros a cada artista
+El formato del archivo de salida esperado es el siguiente: 
+TOP 10 CANCIONES DE 2020 + Recaudación de cada una
+TOP 10 CANCIONES DE 2021 + Recaudación de cada una
+TOP 10 ARTISTAS DE 2020
+TOP 10 ARTISTAS DE 2021
+
+AOP: 
+- Implementar AOP ANTES de ejecutar el metodo generaArchivo() informando que se esta por generar un archivo nuevo. 
+- Implementar AOP ANTES de cargar los TXTS en el programa validando que sean formato .txt 
+- Implementar AOP DESPUES de generar la salida informando que se genero la salida del programa.
+
+INTERFACES: 
+- Implementar un metodo que calcule la recaudación
+
+CLASES:
+Declarar la clase Persona, Artista y Usuario informando atributos de cada una de las mismas. 
+
+ENTREGABLE:
+- Codigo del proyecto
+- Archivo final de salida
+- Subir el proyecto al repo de Github. 

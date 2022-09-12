@@ -62,7 +62,6 @@ public class Main extends API implements CreacionArchivo
 				JSONArray datos2 =  obj.getJSONArray("facet_groups");				
 				list.add(datos2.get(0).toString());
 				JSONObject obj2 = new JSONObject(list.get(0));
-				ArrayList<String> list2 = new ArrayList<String>();
 				JSONArray datos3 =  obj2.getJSONArray("facets");
 				List<Provincia> listaProvincia = new ArrayList<>();
 				
