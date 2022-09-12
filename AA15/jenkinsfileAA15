@@ -1,0 +1,66 @@
+import java.time.LocalDate
+pipeline{
+    agent any
+    stages{
+        stage('main'){
+            steps{
+                script{
+println 'ID de Usuario: 1	Nombre: Sergio González Acosta	Fecha: 2022-09-12'
+println 'Provincia: A Coruña	Capital: A Coruña'
+println 'Provincia: Alacant	Capital: Alacant'
+println 'Provincia: Albacete	Capital: Albacete'
+println 'Provincia: Almería	Capital: Almería'
+println 'Provincia: Araba	Capital: Araba'
+println 'Provincia: Asturias	Capital: Asturias'
+println 'Provincia: Badajoz	Capital: Badajoz'
+println 'Provincia: Barcelona	Capital: Barcelona'
+println 'Provincia: Bizkaia	Capital: Bizkaia'
+println 'Provincia: Burgos	Capital: Burgos'
+println 'Provincia: Cantabria	Capital: Cantabria'
+println 'Provincia: Castelló	Capital: Castelló'
+println 'Provincia: Ceuta	Capital: Ceuta'
+println 'Provincia: Ciudad Real	Capital: Ciudad Real'
+println 'Provincia: Cuenca	Capital: Cuenca'
+println 'Provincia: Cáceres	Capital: Cáceres'
+println 'Provincia: Cádiz	Capital: Cádiz'
+println 'Provincia: Córdoba	Capital: Córdoba'
+println 'Provincia: Gipuzcoa	Capital: Gipuzcoa'
+println 'Provincia: Girona	Capital: Girona'
+println 'Provincia: Granada	Capital: Granada'
+println 'Provincia: Guadalajara	Capital: Guadalajara'
+println 'Provincia: Huelva	Capital: Huelva'
+println 'Provincia: Huesca	Capital: Huesca'
+println 'Provincia: Illes Balears	Capital: Illes Balears'
+println 'Provincia: Jaén	Capital: Jaén'
+println 'Provincia: La Rioja	Capital: La Rioja'
+println 'Provincia: Las Palmas	Capital: Las Palmas'
+println 'Provincia: León	Capital: León'
+println 'Provincia: Lleida	Capital: Lleida'
+println 'Provincia: Lugo	Capital: Lugo'
+println 'Provincia: Madrid	Capital: Madrid'
+println 'Provincia: Melilla	Capital: Melilla'
+println 'Provincia: Murcia	Capital: Murcia'
+println 'Provincia: Málaga	Capital: Málaga'
+println 'Provincia: Navarra	Capital: Navarra'
+println 'Provincia: Ourense	Capital: Ourense'
+println 'Provincia: Palencia	Capital: Palencia'
+println 'Provincia: Pontevedra	Capital: Pontevedra'
+println 'Provincia: Salamanca	Capital: Salamanca'
+println 'Provincia: Santa Cruz de Tenerife	Capital: Santa Cruz de Tenerife'
+println 'Provincia: Segovia	Capital: Segovia'
+println 'Provincia: Sevilla	Capital: Sevilla'
+println 'Provincia: Soria	Capital: Soria'
+println 'Provincia: Tarragona	Capital: Tarragona'
+println 'Provincia: Teruel	Capital: Teruel'
+println 'Provincia: Toledo	Capital: Toledo'
+println 'Provincia: Valladolid	Capital: Valladolid'
+println 'Provincia: València	Capital: València'
+println 'Provincia: Zamora	Capital: Zamora'
+println 'Provincia: Zaragoza	Capital: Zaragoza'
+println 'Provincia: Ávila	Capital: Ávila'
+}
+}
+}
+}
+}
+
