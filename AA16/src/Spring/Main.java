@@ -13,22 +13,47 @@ import java.util.List;
 import java.util.Scanner;
 import org.springframework.beans.BeansException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import Spring.ConfigurarSpring;
-import Spring.Servicio;
+
 
 
 public class Main extends Usuario implements TotalRecaudado
 {
-	public Integer getTotalRecaudado()
-	{
-		int IngresoPorReproduccion = 2;
+	int IngresoPorReproduccion;
+
+	public int getIngresoPorReproduccion() {
 		return IngresoPorReproduccion;
-		
 	}
+
+	public void setIngresoPorReproduccion(int ingresoPorReproduccion) {
+		IngresoPorReproduccion = ingresoPorReproduccion;
+	}
+	
+
+	public Main(int ingresoPorReproduccion) {
+		super();
+		IngresoPorReproduccion = ingresoPorReproduccion;
+	}
+
+	String nombreArchivo;
+	
+	public String getNombreArchivo() {
+		return nombreArchivo;
+	}
+
+	public void setNombreArchivo(String nombreArchivo) {
+		this.nombreArchivo = nombreArchivo;
+	}
+
+	public Main(String nombreArchivo) {
+		super();
+		this.nombreArchivo = nombreArchivo;
+	}
+	
 	public static void main(String [] arg) throws BeansException
 	{
 		
-		Main obj = new Main();
+		Main obj = new Main(2);
+		Main obj2 = new Main("Salida_Canciones_y_Artistas_"+LocalDate.now()+".txt");
 		File Canciones_2020 = new File("C:\\Users\\sga_1\\Carpeta Trabajo Inicial\\AA16\\Canciones 2020.txt");
 		File Canciones_2021 = new File("C:\\Users\\sga_1\\Carpeta Trabajo Inicial\\AA16\\Canciones 2021.txt");
 		File Artistas_2020 = new File("C:\\Users\\sga_1\\Carpeta Trabajo Inicial\\AA16\\Artistas 2020.txt");
@@ -119,7 +144,7 @@ public class Main extends Usuario implements TotalRecaudado
 				ArrayList<Canciones> ListaCanciones2020 = new ArrayList<>();
 				for (int i=0;i<Canciones2020.size();i++)
 				{
-				    C2020[i] = new Canciones(Canciones2020.get(i), ReproduccionesInt2020.get(i), (obj.getTotalRecaudado()*ReproduccionesInt2020.get(i)));
+				    C2020[i] = new Canciones(Canciones2020.get(i), ReproduccionesInt2020.get(i), (obj.IngresoPorReproduccion*ReproduccionesInt2020.get(i)));
 				    ListaCanciones2020.add(C2020[i]);
 				}
 				
@@ -128,7 +153,7 @@ public class Main extends Usuario implements TotalRecaudado
 				ArrayList<Artistas> ListaArtistas2021 = new ArrayList<>();
 				for (int j=0;j<Canciones2021.size();j++)
 				{
-					 C2021[j] = new Canciones(Canciones2021.get(j), ReproduccionesInt2021.get(j), (obj.getTotalRecaudado()*ReproduccionesInt2021.get(j)));
+					 C2021[j] = new Canciones(Canciones2021.get(j), ReproduccionesInt2021.get(j), (obj.IngresoPorReproduccion*ReproduccionesInt2021.get(j)));
 					 ListaCanciones2021.add(C2021[j]);
 					 
 					 A2020[j] = new Artistas(Artistas2020.get(j));
@@ -148,7 +173,7 @@ public class Main extends Usuario implements TotalRecaudado
 								   "------------ TOP CANCIONES 2021 ------------ " + "\n" + ListaCanciones2021.toString() + "\n" + "\n" +
 								   "------------ TOP ARTISTAS 2020 ------------ " + "\n" + ListaArtistas2020.toString() + "\n" + "\n" +
 								   "------------ TOP ARTISTAS 2021 ------------ " + "\n" + ListaArtistas2021.toString() + "\n" + "\n");
-				Path file = Paths.get(obj.nombreArchivo);				
+				Path file = Paths.get(obj2.nombreArchivo);				
 				List<String> lineas = Arrays.asList(TextoTXT);
 				Files.write(file, lineas, StandardCharsets.UTF_8);
 
@@ -180,6 +205,6 @@ class Usuario
 {
 	int IDusuario = 1234;
 	String NombreUsuario = "Sergio González Acosta";
-	String nombreArchivo = "Salida_Canciones_y_Artistas_"+LocalDate.now()+".txt";
+	
 
 }
