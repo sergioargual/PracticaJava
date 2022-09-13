@@ -3,7 +3,8 @@ Continente: America del sur
 Capital: Buenos Aires
 Habitantes: 44000000
 Clima Predominante: Humedo
-Salario Mínimo: jaja
+Salario Mínimo: 0
 
+PIB: 0.0€
 
 
