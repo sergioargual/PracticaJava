@@ -5,5 +5,6 @@ Habitantes: 83240000
 Clima Predominante: Frio
 Salario Mínimo: 150000
 
+PIB: 1.2486E13€
 
 
