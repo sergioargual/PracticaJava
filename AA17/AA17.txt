@@ -1,0 +1,14 @@
+AA17
+Generar un programa que funcione como un juego de adivinanzas, donde el usuario
+tenga que adivinar un numero entre 1 y 1.000.000
+Donde si adivina le damos un mensaje de "Adivinaste, campeon" y sino adivino que siga iterando hasta adivinar
+teniendo el usuario hasta 5 intentos para adivinar, si excede este numero se le indica que perdio el juego. 
+
+ESTRUCTURA DEL PROGRAMA:
+Clase de usuario, clase principal, interfaz que implemente alguna variable y/o metodo
+que el programa utilice utilizando lambda.
+
+ENTREGABLES:
+- Codigo del proyecto
+- Captura de pantalla
+- Subirlo al repositorio de Github
