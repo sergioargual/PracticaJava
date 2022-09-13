@@ -1,0 +1,9 @@
+Pais: Argentina
+Continente: America del sur
+Capital: Buenos Aires
+Habitantes: 44000000
+Clima Predominante: Humedo
+Salario Mínimo: jaja
+
+
+

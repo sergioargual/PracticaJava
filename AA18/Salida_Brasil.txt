@@ -1,0 +1,9 @@
+Pais: Brasil
+Continente: America del Sur
+Capital: Brasilia
+Habitantes: 212600000
+Clima Predominante: Variado
+Salario Mínimo: 500
+
+
+
