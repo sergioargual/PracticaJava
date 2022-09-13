@@ -1,0 +1,9 @@
+Pais: Alemania
+Continente: Europa
+Capital: Berlin
+Habitantes: 83240000
+Clima Predominante: Frio
+Salario Mínimo: 150000
+
+
+

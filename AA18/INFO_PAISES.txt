@@ -1,0 +1,24 @@
+PAIS:	Argentina
+Continente:	America del sur
+Capital:	Buenos Aires
+Habitantes:	44000000
+Clima predominante:	Humedo
+Salario Minimo:	jaja
+PAIS:	España
+Capital:	Madrid
+Continente:	Europa
+Habitantes:	47350000
+Clima Predominante:	Calido
+Salario Minimo:	105000
+PAIS:	Alemania
+Continente:	Europa
+Capital:	Berlin
+Habitantes:	83240000
+Clima Predominante:	Frio
+Salario Minimo:	150000
+PAIS:	Brasil
+Continente:	America del Sur
+Capital:	Brasilia
+Habitantes:	212600000
+Clima Predominante:	Variado
+Salario Minimo:	500
