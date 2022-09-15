@@ -88,7 +88,7 @@ public class Main
 							}
 					
 				}
-			//////////////////////// AOP //////////////////////////////////////
+			
 			//////////////////IMPRESIÓN ARCHIVOS ///////////////////////////////
 			String TextoTXT;
 			String NombreArchivo;
@@ -101,6 +101,7 @@ public class Main
 			List<String> lineas2 = Arrays.asList(TextoTXT);
 			Files.write(file, lineas2, StandardCharsets.UTF_8);
 			}
+			////////////////////////AOP //////////////////////////////////////
 			Servicio servicio = ctx.getBean(Servicio.class);
 			servicio.generartxt();
 		}
