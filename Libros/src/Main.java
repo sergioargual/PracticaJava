@@ -1,9 +1,7 @@
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-
 import org.json.*;
 public class Main 
 {
@@ -65,17 +63,18 @@ public class Main
 
 			for (Tiempo iter2:listaTiempo)
 			{
+				
 				if(iter2.getTemperatura_max() >= 24)
 				{
-					System.out.println(iter2+"En "+iter2.getNombre()+" hace "+"Calor" +"\n");
+					System.out.println(iter2+"Gradiente: "+(iter2.getTemperatura_max()-iter2.getTemperatura_min())+"\n"+"En "+iter2.getNombre()+" hace "+"Calor" +"\n");
 				}
 				else
 				{
-					System.out.println(iter2+"En "+iter2.getNombre()+" hace "+"Frío"+"\n");
+					System.out.println(iter2+"Gradiente: "+(iter2.getTemperatura_max()-iter2.getTemperatura_min())+"\n"+"En "+iter2.getNombre()+" hace "+"Frío"+"\n");
 				}
 				
 			}
-			
+
 			
 		}
 		catch (Exception e)
