@@ -1,7 +1,0 @@
-Nombre: Getafe
-Clima: Poco nuboso
-Temperatura máxima: 22
-Temperatura mínima: 9
-Gradiente: 13
-En Getafe hace Frío
-

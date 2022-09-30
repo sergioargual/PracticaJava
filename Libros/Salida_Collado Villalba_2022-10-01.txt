@@ -1,0 +1,7 @@
+Nombre: Collado Villalba
+Clima: Poco nuboso
+Temperatura máxima: 23
+Temperatura mínima: 9
+Gradiente: 14
+En Collado Villalba hace Frío
+

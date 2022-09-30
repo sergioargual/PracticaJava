@@ -1,7 +1,0 @@
-Nombre: Aranjuez
-Clima: Despejado
-Temperatura máxima: 23
-Temperatura mínima: 8
-Gradiente: 15
-En Aranjuez hace Frío
-
