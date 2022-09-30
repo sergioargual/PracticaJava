@@ -1,7 +1,0 @@
-Nombre: Navalcarnero
-Clima: Despejado
-Temperatura máxima: 22
-Temperatura mínima: 8
-Gradiente: 14
-En Navalcarnero hace Frío
-

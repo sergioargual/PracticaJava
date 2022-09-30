@@ -11,75 +11,61 @@ import java.util.List;
 import java.util.Scanner;
 import org.json.*;
 import java.time.LocalDate;
-public class Main implements Archivos//implementamos la interface
+public class Main implements Archivos, API
 {
 	
 	public Path Salida(String nombreArchivo, String Texto) throws IOException
 	{
-		Path file1 = Paths.get(nombreArchivo);				
-		List<String> lineas1 = Arrays.asList(Texto);
-		return Files.write(file1, lineas1, StandardCharsets.UTF_8);
+		Path file = Paths.get(nombreArchivo);				
+		List<String> lineas = Arrays.asList(Texto);
+		return Files.write(file, lineas, StandardCharsets.UTF_8); //el return es de tipo path, ya que Files es de tipo Path, por tanto el método ha de ser de tipo Path
+	}
+	public String Conexion(String url) throws Exception
+	{
+		URL url1 = new URL(url);
+		HttpURLConnection conexión = (HttpURLConnection) url1.openConnection();
+		conexión.connect();
+		StringBuilder información = new StringBuilder();
+		Scanner sc = new Scanner(url1.openStream());
+		int tiempoderespuesta = conexión.getResponseCode();
+		
+		if(tiempoderespuesta != 200)
+		{
+			throw new RuntimeException("HttpResponse" + tiempoderespuesta);
+		}
+		else
+		{
+
+			while(sc.hasNext())
+			{
+				información.append(sc.nextLine());
+				
+			}
+			sc.close();
+		}
+		String datos = información.toString();
+		return datos; //nuestro return es de tipo String, por lo que el método ha de ser también de tipo String
 	}
 	
 	static ArrayList<Usuario> listaUsuarios = new ArrayList<>();
 	public static void main(String[] args) 
 	{
-		/*
-		 * 	inicio variable contador; para poder controlar el número de veces que se va a ejecutar el
-			bucle utilizamos una variable. Esta variable puede estar declarada anteriormente o
-			podemos declararla en el bucle. Con iniciar nos referimos a dar un valor inicial a la variable.
-			• condición; el bucle se ejecutará mientras se cumpla la condición.
-			• modificación; cada vez que se ejecute el bucle procedemos a modificar la variable
-			contador. Lo más común suele ser incrementar o decrementar su valor.
-			• cuerpo del bucle; se denomina de esta forma al conjunto de instrucción que se ejecutan
-			de forma repetitiva. 
-		 */
-		 //definimos la dimensión del Array del objetp U de la clase tipo Uusuario (Obligatoriamente)
-		ArrayList<Usuario> U = new ArrayList<>();
-		for (int i=0/*Inicio de la variable*/;i<3/*condición*/;i++/*modificación*/)
-		{
-			/*cuerpo del bucle*/
-			U.add(new Usuario("Sergio", i));
-		}
-		
-		
 
 		try
 		{
-			URL url = new URL("https://www.el-tiempo.net/api/json/v2/provincias/28");
-			HttpURLConnection conexión = (HttpURLConnection) url.openConnection();
-			conexión.connect();
-			StringBuilder información = new StringBuilder();
-			Scanner sc = new Scanner(url.openStream());
-			int tiempoderespuesta = conexión.getResponseCode();
-			
-			if(tiempoderespuesta != 200)
-			{
-				throw new RuntimeException("HttpResponse" + tiempoderespuesta);
-			}
-			else
-			{
-
-				while(sc.hasNext())
-				{
-					información.append(sc.nextLine());
-					
-				}
-				sc.close();
-			}
-			String datos = información.toString();
+			Main obj = new Main(); //creamos un objeto de la clase donde hayamos implementado la interface	
 			ArrayList<Tiempo> listaTiempo = new ArrayList<>();
-			JSONObject datosjson = new JSONObject(datos);
+			JSONObject datosjson = new JSONObject(obj.Conexion("https://www.el-tiempo.net/api/json/v2/provincias/28"));
 			JSONArray datosCiudades = new JSONArray(datosjson.getJSONArray("ciudades"));
 			
 			for (Object iter: datosCiudades) //bucle FOR-EACH cuya variable es de tipo Object (para colecciones claves)
 			{
 				
 				listaTiempo.add(new Tiempo(((JSONObject) iter).getString("name"), ((JSONObject) iter).getJSONObject("stateSky").getString("description"), Integer.parseInt(((JSONObject) iter).getJSONObject("temperatures").getString("max")), Integer.parseInt(((JSONObject) iter).getJSONObject("temperatures").getString("min"))));
-				// sobre cada elemento del JSONArray, estamos creando un JSONObject -> ((JSONObject) iter) <-
+				// sobre cada elemento del JSONArray, estamos creando un JSONObject -> ((JSONObject) iter) <-DEFINIMOS EL TIPO DE OBJETO QUE ES iter
 			}
+			
 			ArrayList<String> texto1 = new ArrayList<>();
-			Main obj = new Main(); //creamos un objeto de la clase donde hayamos implementado la interface
 			for (Tiempo iter2:listaTiempo)
 			{
 				
@@ -94,12 +80,8 @@ public class Main implements Archivos//implementamos la interface
 					for (int i=0;i<texto1.size();i++)
 					{
 						obj.Salida("Salida_"+iter2.getNombre()+"_"+LocalDate.now()+".txt", texto1.get(i));
-					}
-				
-			}
-			
-			
-			
+					}	
+			}	
 		}
 		
 		
@@ -115,5 +97,9 @@ public class Main implements Archivos//implementamos la interface
 interface Archivos
 {
 	public Path Salida(String nombreArchivo, String Texto) throws IOException;
+}
+interface API
+{
+	public String Conexion(String url) throws Exception;
 }
 

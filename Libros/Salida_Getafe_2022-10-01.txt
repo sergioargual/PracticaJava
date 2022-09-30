@@ -1,0 +1,7 @@
+Nombre: Getafe
+Clima: Despejado
+Temperatura máxima: 24
+Temperatura mínima: 8
+Gradiente: 16
+En Getafe hace Calor
+

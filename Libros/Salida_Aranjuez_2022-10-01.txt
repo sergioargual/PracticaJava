@@ -1,0 +1,7 @@
+Nombre: Aranjuez
+Clima: Poco nuboso
+Temperatura máxima: 25
+Temperatura mínima: 5
+Gradiente: 20
+En Aranjuez hace Calor
+
