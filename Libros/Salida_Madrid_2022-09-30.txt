@@ -1,0 +1,7 @@
+Nombre: Madrid
+Clima: Despejado
+Temperatura máxima: 21
+Temperatura mínima: 10
+Gradiente: 11
+En Madrid hace Frío
+

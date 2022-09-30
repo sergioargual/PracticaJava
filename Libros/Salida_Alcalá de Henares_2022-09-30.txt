@@ -1,0 +1,7 @@
+Nombre: Alcalá de Henares
+Clima: Despejado
+Temperatura máxima: 23
+Temperatura mínima: 9
+Gradiente: 14
+En Alcalá de Henares hace Frío
+
