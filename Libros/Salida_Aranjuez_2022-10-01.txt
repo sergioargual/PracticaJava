@@ -1,5 +1,5 @@
 Nombre: Aranjuez
-Clima: Poco nuboso
+Clima: Despejado
 Temperatura máxima: 25
 Temperatura mínima: 5
 Gradiente: 20

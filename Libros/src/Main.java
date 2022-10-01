@@ -54,6 +54,9 @@ public class Main implements Archivos, API
 		try
 		{
 			Main obj = new Main(); //creamos un objeto de la clase donde hayamos implementado la interface	
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			ArrayList<Tiempo> listaTiempo = new ArrayList<>();
 			JSONObject datosjson = new JSONObject(obj.Conexion("https://www.el-tiempo.net/api/json/v2/provincias/28"));
 			JSONArray datosCiudades = new JSONArray(datosjson.getJSONArray("ciudades"));
@@ -77,11 +80,46 @@ public class Main implements Archivos, API
 				{
 					texto1.add(iter2+"Gradiente: "+(iter2.getTemperatura_max()-iter2.getTemperatura_min())+"\n"+"En "+iter2.getNombre()+" hace "+"Frío"+"\n");
 				}
+				
 					for (int i=0;i<texto1.size();i++)
 					{
 						obj.Salida("Salida_"+iter2.getNombre()+"_"+LocalDate.now()+".txt", texto1.get(i));
 					}	
-			}	
+					
+					
+			}
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			ArrayList<Universidad> listaUniversidades = new ArrayList<>();
+			JSONArray datosUniversidades = new JSONArray(obj.Conexion("http://universities.hipolabs.com/search?country=United+Kingdom"));
+			for (Object iter3: datosUniversidades)
+			{
+				listaUniversidades.add(new Universidad(((JSONObject) iter3).getString("name"),(((JSONObject) iter3).getJSONArray("web_pages").get(0).toString())));
+			}
+			
+			ArrayList<String> texto2 = new ArrayList<>();
+			for (Universidad iter4:listaUniversidades)
+			{
+				
+				
+					texto2.add(iter4.toString());
+
+					for (int i=0;i<texto2.size();i++)
+					{
+						obj.Salida("Salida_"+iter4.getNombre()+"_"+LocalDate.now()+".txt", texto2.get(i));
+					}	
+					
+					
+			}
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 		
 		
